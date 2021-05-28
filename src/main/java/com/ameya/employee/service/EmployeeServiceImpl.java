@@ -13,8 +13,8 @@ import com.ameya.employee.model.EmployeeBean;
 public class EmployeeServiceImpl implements EmployeeService {
 	Map<Long, EmployeeBean> allEmployee = new HashMap<>();
 
-	 {
-		
+	{
+
 		EmployeeBean e1 = new EmployeeBean();
 		EmployeeBean e2 = new EmployeeBean();
 		EmployeeBean e3 = new EmployeeBean();
@@ -44,7 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		e5.setEmployeeName("Luka");
 		e5.setDepartmentName("Net");
 		e5.setSalary(3400);
-		
+
 		allEmployee.put(e1.getId(), e1);
 		allEmployee.put(e2.getId(), e2);
 		allEmployee.put(e3.getId(), e3);
@@ -95,16 +95,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public EmployeeBean updateEmployee(EmployeeBean employeeBean) {
 		if (allEmployee.containsKey(employeeBean.getId())) {
-			
+
 			EmployeeBean existingBean=allEmployee.get(employeeBean.getId());
-			
+
 			if(employeeBean.getDepartmentName()!=null && !employeeBean.getDepartmentName().isBlank())
 				existingBean.setDepartmentName(employeeBean.getDepartmentName());
 			if(employeeBean.getEmployeeName()!=null && !employeeBean.getEmployeeName().isBlank())
 				existingBean.setEmployeeName(employeeBean.getEmployeeName());
 			if(employeeBean.getSalary()!=null && !employeeBean.getSalary().equals(0))
 				existingBean.setSalary(employeeBean.getSalary());
-			
+
 			allEmployee.put(existingBean.getId(), existingBean);
 
 			return existingBean;

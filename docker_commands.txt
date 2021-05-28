@@ -1,0 +1,2 @@
+docker build . -t Employee_Docker
+docker run -p 8080:8080 Employee_Docker

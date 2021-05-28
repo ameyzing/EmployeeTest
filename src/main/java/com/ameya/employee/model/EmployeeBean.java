@@ -7,7 +7,6 @@ public class EmployeeBean {
 	private Integer salary;
 	private String departmentName;
 	
-	
 	public Long getId() {
 		return id;
 	}

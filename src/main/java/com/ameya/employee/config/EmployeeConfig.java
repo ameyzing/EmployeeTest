@@ -19,7 +19,6 @@ public class EmployeeConfig {
           .select()                                  
           .apis(RequestHandlerSelectors.basePackage("com.ameya.employee.controller"))              
           .paths(PathSelectors.any())                          
-          .build();                                           
+          .build();                               
     }
-
 }

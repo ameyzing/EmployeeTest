@@ -11,6 +11,6 @@ public interface EmployeeService {
 	EmployeeBean addEmployee(EmployeeBean employeeBean);
 	EmployeeBean updateEmployee(EmployeeBean employeeBean);
 	List<EmployeeBean> getEmployeesOfMinSalary(Integer salary);
-	List<EmployeeBean> getEmployeesOfDepartment(String department);
+	List<EmployeeBean> getEmployeesOfDepartment( String department);
 
 }
